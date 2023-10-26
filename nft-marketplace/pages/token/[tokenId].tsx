@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { 
     MARKETPLACE_ADDRESS,
     NFT_COLLECTION_ADDRESS 
-} from "../../../const/addresses";
+} from "../../const/addresses";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
@@ -105,8 +105,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         {Object.entries(nft?.metadata?.attributes || {}).map(
                         ([key, value]) => (
                             <Flex key={key} direction={"column"} alignItems={"center"} justifyContent={"center"} borderWidth={1} p={"8px"} borderRadius={"4px"}>
-                                <Text fontSize={"small"}>{value.trait_type}</Text>
-                                <Text fontSize={"small"} fontWeight={"bold"}>{value.value}</Text>
+                                {/* <Text fontSize={"small"}>{value.trait_type}</Text>
+                                <Text fontSize={"small"} fontWeight={"bold"}>{value.value}</Text> */}
                             </Flex>
                         )
                         )}
